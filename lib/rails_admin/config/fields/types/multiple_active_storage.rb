@@ -18,7 +18,7 @@ module RailsAdmin
 
             register_instance_option :image? do
               if value
-                value.filename.to_s.split('.').last =~ /jpg|jpeg|png|gif|svg/i
+                value.filename.to_s.split('.').last =~ /jpg|jpeg|webp|png|gif|svg/i
               end
             end
 

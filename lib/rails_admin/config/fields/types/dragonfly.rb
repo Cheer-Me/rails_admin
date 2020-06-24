@@ -12,7 +12,7 @@ module RailsAdmin
           register_instance_option :image? do
             false unless value
             if abstract_model.model.new.respond_to?("#{name}_name")
-              bindings[:object].send("#{name}_name").to_s.split('.').last =~ /jpg|jpeg|png|gif/i
+              bindings[:object].send("#{name}_name").to_s.split('.').last =~ /jpg|jpeg|webp|png|gif/i
             else
               true # Dragonfly really is image oriented
             end

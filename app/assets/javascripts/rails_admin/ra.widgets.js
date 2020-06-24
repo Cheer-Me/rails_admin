@@ -67,7 +67,7 @@
           image_container.parent().find('img:not(.preview)').hide();
         }
         ext = $("#" + input.id).val().split('.').pop().toLowerCase();
-        if (input.files && input.files[0] && $.inArray(ext, ['gif', 'png', 'jpg', 'jpeg', 'bmp']) !== -1) {
+        if (input.files && input.files[0] && $.inArray(ext, ['gif', 'webp', 'png', 'jpg', 'jpeg', 'bmp']) !== -1) {
           reader = new FileReader();
           reader.onload = function(e) {
             image_container.attr("src", e.target.result);
@@ -97,7 +97,7 @@
         for (i = 0, len = ref.length; i < len; i++) {
           file = ref[i];
           ext = file.name.split('.').pop().toLowerCase();
-          if ($.inArray(ext, ['gif', 'png', 'jpg', 'jpeg', 'bmp']) === -1) {
+          if ($.inArray(ext, ['gif', 'webp', 'png', 'jpg', 'jpeg', 'bmp']) === -1) {
             continue;
           }
           image_container = $('<img />').addClass('preview').addClass('img-thumbnail');
